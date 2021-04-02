@@ -1,0 +1,78 @@
+fieldLayouts:
+  09f1cc0a-5880-4406-8245-fdcf0e9b7143:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: d7f85baa-c1e6-4c09-83e6-ab67f47b0ddc # Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5a541c73-423e-4969-875b-4d016d6190e6 # Feature Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b3eed510-dfb3-497c-9d9e-c7b1677cd0f4 # Post Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b2e45111-338d-4cc7-98b3-070a785b7dbc # Post Categories
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Post Content'
+        sortOrder: 2
+handle: blog
+hasTitleField: true
+name: Blog
+section: 20209da0-3789-4394-b46a-86760a2d4fa2 # Blog
+sortOrder: 1
+titleFormat: Headline
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

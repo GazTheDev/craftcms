@@ -1,0 +1,139 @@
+{% extends "_layout" %}
+{% block content %}
+{% requireLogin %}
+
+
+{% macro errorList(errors) %}
+  {% if errors %}
+    <ul class="errors">
+      {% for error in errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{# If there were any validation errors, a `user` variable will be passed to the
+   template, which contains the posted values and validation errors. If that’s not
+   set, we’ll default to the current user. #}
+{% set user = user ?? currentUser %}
+
+{% if user.hasErrors() %}
+  <p>Unable to save your profile.</p>
+{% endif %}
+
+         <section class="text-gray-700 body-font">
+            <div class="container px-8 pt-24 pb-24 mx-auto lg:px-4">
+                <div
+                    class="flex flex-col w-full p-8 mx-auto mt-10 border rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
+                    <div class="flex flex-wrap -m-2">
+                        <div class="w-1/2 p-2">
+                            <div class="relative">
+
+<form method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+  {{ csrfInput() }}
+  {{ actionInput('users/save-user') }}
+  {{ hiddenInput('userId', user.id) }}
+  {{ redirectInput("users/#{currentUser.username}") }}
+
+  <label for="first-name">First Name</label>
+  {{ input('text', 'firstName', user.firstName, {
+    id: 'first-name',
+    class: user.hasErrors('firstName') ? 'error',
+    class: "w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
+  }) }}
+  {{ _self.errorList(user.getErrors('firstName')) }}
+    </div>
+                        </div>
+                         <div class="w-1/2 p-2">
+                            <div class="relative">
+  <label for="last-name">Last Name</label>
+  {{ input('text', 'lastName', user.lastName, {
+    id: 'last-name',
+    class: user.hasErrors('lastName') ? 'error',
+    class:"w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
+  }) }}
+  {{ _self.errorList(user.getErrors('lastName')) }}
+<br />
+</div>
+</div>
+                        
+
+  {% if user.photo %}
+    <label>Photo</label>
+    {{ user.photo.getImg({width: 150, height: 150})|attr({
+      id: 'user-photo',
+      alt: user.friendlyName,
+    }) }}
+    </div>
+<br />
+    <label for="delete-photo">
+      {{ input('checkbox', 'deletePhoto', '1', {
+        id: 'delete-photo',
+      }) }}
+      Delete photo
+    </label>
+  {% endif %}
+<br />
+  <label for="photo">Upload a new photo</label>
+  {{ input('file', 'photo', null, {
+    id: 'photo',
+    accept: 'image/png,image/jpeg',
+  }) }}
+<br />
+                        <div class="w-full p-2">
+
+  {% if not craft.app.config.general.useEmailAsUsername %}
+    <label for="username">Username</label>
+    {{ input('text', 'username', user.username, {
+      id: 'username',
+      class: user.hasErrors('username') ? 'error',
+      class:"w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
+    }) }}
+    {{ _self.errorList(user.getErrors('username')) }}
+  {% endif %}
+<br />
+</div>
+ <div class="w-full p-2">
+  <label for="email">Email</label>
+  {{ input('text', 'email', user.unverifiedEmail ?? user.email, {
+    id: 'email',
+    class: user.hasErrors('email') ? 'error',
+    class:"w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
+
+  }) }}
+  {{ _self.errorList(user.getErrors('username')) }}
+
+  {% if craft.app.projectConfig.get('users.requireEmailVerification') %}
+    <p>New email addresses need to be verified.</p>
+  {% endif %}
+<br />
+</div>
+ <div class="w-full p-2">
+
+  <label for="new-password">New Password</label>
+  {{ input('password', 'newPassword', null, {
+    id: 'new-password',
+    class: user.hasErrors('newPassword') ? 'error',
+        class:"w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
+
+  }) }}
+  {{ _self.errorList(user.getErrors('newPassword')) }}
+<br />
+</div>
+ <div class="w-full p-2">
+
+  <label for="current-password">Current Password</label>
+  {{ input('password', 'password', null, {
+    id: 'current-password',
+    class: user.hasErrors('currentPassword') ? 'error',
+            class:"w-full px-4 py-2 mr-4 text-base text-blue-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
+  }) }}
+  {{ _self.errorList(user.getErrors('currentPassword')) }}
+</div>
+
+
+  <input class="w-full px-8 py-2 font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2" type="submit" value="Save Profile">
+</form>
+</div>
+{% endblock %}

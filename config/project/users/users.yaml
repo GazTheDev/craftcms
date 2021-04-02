@@ -1,0 +1,6 @@
+allowPublicRegistration: true
+defaultGroup: 2f5cf195-cb98-4c07-9124-5838ac70af14 # members
+photoSubpath: null
+photoVolumeUid: c2d2192c-8775-4172-a003-98b4dc07b709 # Blog
+requireEmailVerification: true
+suspendByDefault: false

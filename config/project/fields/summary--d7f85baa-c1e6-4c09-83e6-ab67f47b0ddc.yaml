@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 228e5f39-f37b-4725-9441-d67e3ba47be5 # Blog Post Fields
+handle: summary
+instructions: 'Enter a brief '
+name: Summary
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '1'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
