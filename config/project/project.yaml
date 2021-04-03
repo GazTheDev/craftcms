@@ -1,4 +1,4 @@
-dateModified: 1617398162
+dateModified: 1617481528
 email:
   fromEmail: daviesg77@gmail.com
   fromName: TSD
@@ -89,6 +89,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  videos:
+    edition: standard
+    enabled: true
+    licenseKey: C0YW4RSXWLKI7GKKJHJEQC2X
+    schemaVersion: 1.0.3
 system:
   edition: pro
   live: true

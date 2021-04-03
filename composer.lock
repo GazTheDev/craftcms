@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01b2d574ae9f2f4ecd50fcb7b0b9bb06",
+    "content-hash": "b5f6a954cb47baa850dc085b2b58e530",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -789,6 +789,96 @@
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
             "time": "2020-08-30T22:54:22+00:00"
+        },
+        {
+            "name": "dukt/oauth2-vimeo",
+            "version": "2.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dukt/oauth2-vimeo/zipball/a87f622a07b425abeafab2e9dd202dc00eaf7441",
+                "reference": "a87f622a07b425abeafab2e9dd202dc00eaf7441",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dukt\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin David",
+                    "email": "ben@dukt.net",
+                    "homepage": "https://github.com/benjamindavid"
+                }
+            ],
+            "description": "Vimeo OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "oauth",
+                "oauth2",
+                "vimeo"
+            ],
+            "time": "2018-04-27T13:55:02+00:00"
+        },
+        {
+            "name": "dukt/videos",
+            "version": "2.0.13",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dukt/videos/zipball/49fb415190c3273b54de7baf603b3f933ec703b9",
+                "reference": "49fb415190c3273b54de7baf603b3f933ec703b9",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.5.0",
+                "dukt/oauth2-vimeo": "^2.0.1",
+                "league/oauth2-client": "^2.5.0",
+                "league/oauth2-google": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Videos",
+                "handle": "videos",
+                "description": "Connect to YouTube & Vimeo and publish social videos on your website",
+                "documentationUrl": "https://docs.dukt.net/videos/v2",
+                "changelogUrl": "https://github.com/dukt/videos/blob/v2/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "dukt\\videos\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Dukt",
+                    "homepage": "https://dukt.net/"
+                }
+            ],
+            "description": "Connect to YouTube & Vimeo and publish social videos on your website.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "videos",
+                "vimeo",
+                "youtube"
+            ],
+            "support": {
+                "email": "support@dukt.net",
+                "issues": "https://github.com/dukt/videos/issues?state=open",
+                "source": "https://github.com/dukt/videos",
+                "docs": "https://github.com/dukt/videos",
+                "rss": "https://github.com/dukt/videos/commits/v2.atom"
+            },
+            "time": "2021-02-10T22:38:12+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -1583,6 +1673,45 @@
                 "single sign on"
             ],
             "time": "2020-10-28T02:03:40+00:00"
+        },
+        {
+            "name": "league/oauth2-google",
+            "version": "3.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/6b79441f244040760bed5fdcd092a2bda7cf34c6",
+                "reference": "6b79441f244040760bed5fdcd092a2bda7cf34c6",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Woody Gilk",
+                    "email": "woody.gilk@gmail.com",
+                    "homepage": "http://shadowhand.me"
+                }
+            ],
+            "description": "Google OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "client",
+                "google",
+                "oauth",
+                "oauth2"
+            ],
+            "time": "2021-01-27T16:09:03+00:00"
         },
         {
             "name": "maennchen/zipstream-php",

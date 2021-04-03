@@ -1,61 +1,7 @@
 {% extends "_layout" %}
 {% block content %}
-{% macro errorList(errors) %}
-  {% if errors %}
-    {{ ul(errors, {class: 'errors'}) }}
-  {% endif %}
-{% endmacro %}
+  <h1 class="text-4xl text-black font-display my-4">Create An</h1>
 
-<form method="post" accept-charset="UTF-8">
-  {{ csrfInput() }}
-  {{ actionInput('users/save-user') }}
-  {{ redirectInput('http://localhost') }}
+{{ craft.freeform.form("signup").render() }}
 
-  <label for="username">Username</label>
-  {{ input('text', 'username', user.username ?? null, {
-    id: 'username',
-  }) }}
-
-  {% if user is defined %}
-    {{ _self.errorList(user.getErrors('username')) }}
-  {% endif %}
-
-  <label for="firstName">First Name</label>
-  {{ input('text', 'firstName', user.firstName ?? null, {
-      id: 'firstName',
-  }) }}
-
-  {% if user is defined %}
-    {{ _self.errorList(user.getErrors('firstName')) }}
-  {% endif %}
-
-  <label for="lastName">Last Name</label>
-  {{ input('text', 'lastName', user.lastName ?? null, {
-      id: 'lastName',
-  }) }}
-
-  {% if user is defined %}
-    {{ _self.errorList(user.getErrors('lastName')) }}
-  {% endif %}
-
-  <label for="email">Email</label>
-  {{ input('email', 'email', user.email ?? null, {
-    id: 'email',
-  }) }}
-
-  {% if user is defined %}
-    {{ _self.errorList(user.getErrors('email')) }}
-  {% endif %}
-
-  <label for="password">Password</label>
-  {{ input('password', 'password', null, {
-    id: 'password',
-  }) }}
-
-  {% if user is defined %}
-    {{ _self.errorList(user.getErrors('password')) }}
-  {% endif %}
-
-  <button type="submit">Register</button>
-</form>
 {% endblock %}

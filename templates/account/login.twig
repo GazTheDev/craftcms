@@ -1,27 +1,55 @@
-<form method="post" accept-charset="UTF-8">
+{% extends "_layout" %}
+{% block content %}
+
+<section class="min-h-screen flex flex-col">
+ <div class="flex flex-1 items-center justify-center">
+                <div class="rounded-lg sm:border-2 px-4 lg:px-24 py-16 lg:max-w-xl sm:max-w-md w-full text-center">
+<form class="text-center" method="post" accept-charset="UTF-8">
+  <h1 class="font-bold tracking-wider text-3xl mb-8 w-full text-gray-600">
+                            Sign in to Your TrainSimDepot Account
+                        </h1>
   {{ csrfInput() }}
   {{ actionInput('users/login') }}
-
+<div class="py-2 text-left">
   <label for="loginName">Username or email</label>
   {{ input('text', 'loginName', craft.app.user.rememberedUsername, {
     id: 'loginName',
+    class:"border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700 " 
   }) }}
+</div>
+  <div class="py-2 text-left">
 
   <label for="password">Password</label>
   {{ input('password', 'password', null, {
     id: 'password',
+    class:"border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700 "
   }) }}
-
+ </div>
   <label>
     {{ input('checkbox', 'rememberMe', '1') }}
     Remember me
   </label>
-
-  <button type="submit">Login</button>
-
+ <div class="py-2">
+  <button class="border-2 border-gray-100 focus:outline-none bg-purple-600 text-white font-bold tracking-wider block w-full p-2 rounded-lg focus:border-gray-700 hover:bg-purple-700" type="submit">Login</button>
+</div>
+ <div class="text-center">
+                        <a href="{{ url('reset-password') }}" class="hover:underline">Forgot password?</a>
+                    </div>
+                    <div class="text-center mt-12">
+                        <span>
+                            Don't have an account?
+                        </span>
+                        <a href="/account/register" class="font-light text-md text-indigo-600 underline font-semibold hover:text-indigo-800">Create One</a>
+                    </div>
+                </div>
+            </div>
+        </section>        
   {% if errorMessage is defined %}
     <p>{{ errorMessage }}</p>
   {% endif %}
-</form>
 
-<p><a href="{{ url('reset-password') }}">Forgot your password?</a></p>
+    </div>
+    
+                    </form>
+            
+{% endblock %}
