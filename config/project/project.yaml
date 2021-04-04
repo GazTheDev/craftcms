@@ -1,7 +1,11 @@
-dateModified: 1617557388
+dateModified: 1617565546
 email:
   fromEmail: daviesg77@gmail.com
   fromName: TSD
+  replyToEmail: null
+  template: _includes\email-template
+  transportSettings:
+    command: ''
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
   comments-work:
