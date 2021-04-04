@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 20e5e244-30ba-4e84-9c2d-1456cb513188 # Single
+handle: pageContent
+instructions: ''
+name: 'Page Content'
+searchable: false
+settings:
+  assetsFilesSource: 'folder:1'
+  assetsFilesSubPath: ''
+  assetsImagesSource: 'folder:1'
+  assetsImagesSubPath: ''
+  editorConfig: ''
+translationKeyFormat: null
+translationMethod: none
+type: froala\craftfroalawysiwyg\Field

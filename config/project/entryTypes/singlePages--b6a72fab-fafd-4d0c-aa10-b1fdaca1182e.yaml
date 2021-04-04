@@ -1,5 +1,5 @@
 fieldLayouts:
-  e44a4798-a264-4ce1-92d7-3c397055c018:
+  1cd02513-02b6-433a-a9a0-52e93826ab5b:
     tabs:
       -
         elements:
@@ -27,6 +27,33 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: d7f85baa-c1e6-4c09-83e6-ab67f47b0ddc # Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30d90418-ca6a-439a-8454-40023d99a6aa # Page Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5a541c73-423e-4969-875b-4d016d6190e6 # Feature Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 6666963f-be5e-428b-b644-ed805d632c2c # SEO
             instructions: null
             label: null
@@ -37,10 +64,10 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: submit
-hasTitleField: false
-name: submit
-section: dd595451-f796-4c91-be07-a68be4800a63 # submit
+handle: singlePages
+hasTitleField: true
+name: 'Single Pages'
+section: c4b6184f-1750-4c36-8bba-91c42cf76225 # Single Pages
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

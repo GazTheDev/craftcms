@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5f6a954cb47baa850dc085b2b58e530",
+    "content-hash": "5c779f5757d2e340f68b5355adc6edd9",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -987,6 +987,41 @@
             "time": "2021-01-21T10:13:20+00:00"
         },
         {
+            "name": "ether/seo",
+            "version": "3.6.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/9e545940248a6b70b16adf3480b9c8f6c197859d",
+                "reference": "9e545940248a6b70b16adf3480b9c8f6c197859d",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.2.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "seo",
+                "name": "SEO",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\seo\\Seo"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\seo\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "SEO utilities including a unique field type, sitemap, & redirect manager",
+            "support": {
+                "issues": "https://github.com/ethercreative/seo",
+                "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
+            },
+            "time": "2020-11-30T12:51:47+00:00"
+        },
+        {
             "name": "ezyang/htmlpurifier",
             "version": "v4.13.0",
             "dist": {
@@ -1026,6 +1061,86 @@
                 "html"
             ],
             "time": "2020-06-29T00:56:53+00:00"
+        },
+        {
+            "name": "froala/craft-froala-wysiwyg",
+            "version": "3.2.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/froala/Craft-3-Froala-WYSIWYG/zipball/b4c5ff830e306506bef42fc65239bf90692e26da",
+                "reference": "b4c5ff830e306506bef42fc65239bf90692e26da",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1",
+                "froala/wysiwyg-editor": "3.2.6"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Froala WYSIWYG Editor",
+                "handle": "froala-editor",
+                "hasSettings": true,
+                "developer": "Bert Oost",
+                "developerUrl": "https://bertoost.com",
+                "documentationUrl": "https://github.com/froala/Craft-3-Froala-WYSIWYG/blob/master/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "froala\\craftfroalawysiwyg\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Craft 3 CMS plugin for Froala WYSIWYG HTML Rich Text Editor.",
+            "homepage": "https://github.com/froala/Craft-3-Froala-WYSIWYG",
+            "keywords": [
+                "craft",
+                "craftcms",
+                "craftcms plugin",
+                "froala",
+                "plugin",
+                "wysiwyg"
+            ],
+            "time": "2021-01-25T11:55:41+00:00"
+        },
+        {
+            "name": "froala/wysiwyg-editor",
+            "version": "v3.2.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/froala/wysiwyg-editor/zipball/955e52436f454cb97488a0ec2f0ca274d290c523",
+                "reference": "955e52436f454cb97488a0ec2f0ca274d290c523",
+                "shasum": ""
+            },
+            "type": "component",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Froala Labs",
+                    "email": "support@froala.com"
+                }
+            ],
+            "description": "A beautiful jQuery WYSIWYG HTML rich text editor. High performance and modern design make it easy to use for developers and loved by users.",
+            "homepage": "https://www.froala.com/wysiwyg-editor",
+            "keywords": [
+                "editor",
+                "froala",
+                "froala-editor",
+                "froala-wysiwyg",
+                "html",
+                "javascript",
+                "jquery",
+                "jquery-plugin",
+                "rich editor",
+                "rich text editor",
+                "rte",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2021-01-25T05:27:18+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

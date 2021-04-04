@@ -7,31 +7,36 @@
     width: 900,
     height: 600,
     quality: 90
-} %}
+} %} 
 
 {% block content %}
+ 
+<section class="text-gray-700 body-font">
+            <div class="container px-8 mx-auto py-36 lg:px-4">
+                <div class="flex flex-col w-full mb-12 text-left lg:text-center">
+                    <h1 class="mb-6 text-2xl font-semibold tracking-tighter text-black sm:text-6xl title-font">
+{{ entry.title }}                        <br class="">
+                        
+                    </h1>
+                    <p class="mx-auto text-base font-medium leading-relaxed text-gray-700 lg:w-1/2">
+                    {{entry.summary}}
+. </p>
+                </div>
+       </section>
 
-  <h1 class="text-4xl text-black font-display my-4 text-center">{{ entry.title }}</h1>
-
-  {% if entry.featureImage | length %}
+ {% if entry.featureImage | length %}
     {% for image in entry.featureImage.all() %}
-      <img src="{{ image.getUrl(featureImage) }}" alt="{{ image.title }}" />
+      <img class="mx-auto"src="{{ image.getUrl(featureImage) }}" alt="{{ image.title }}" />
     {% endfor %}
   {% endif %}
 
-  {% include "_includes/post-blocks" with { blocks: entry.postContent.all() } only %}
+  {{  entry.pageContent }} 
    {# display post categories #}
-  {% if entry.postCategories|length %}
-  <div class="border-t py-2 mb-6">
-    {% for category in entry.postCategories.all() %}
-      <a href="http://{{ category.url }}" class="inline-block border rounded px-2 py-1 text-sm">
-        {{- category.title -}}
-      </a>
+
      
 
-    {% endfor %}
-  </div>
-  {% endif %}
+  
+  
   {# @var commentsWork \twentyfourhoursmedia\commentswork\services\CommentsWorkService #}
 {% set commentsWork = craft.commentsWork.service %}
 
